@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>H5P Viewer</title>
+  <script src="dist/h5p-standalone-main.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    #h5p-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>H5P Interactive Content</h1>
+  <div id="h5p-container"></div>
+  <script>
+    H5PStandalone.load({
+      h5pJsonPath: 'workspace/passive-aggressiveness-211.h5p',
+      frameJs: 'dist/frame.bundle.js',
+      frameCss: 'dist/styles/h5p.css',
+      target: document.getElementById('h5p-container')
+    });
+  </script>
+</body>
+</html>
